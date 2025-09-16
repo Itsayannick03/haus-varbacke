@@ -8,7 +8,8 @@ export function Header()
             <img className='img' src="moose.png" alt=""  />
             <div className='centerGroup'>
                 <div>
-                     <a className='bookingBtn' href="/">Language</a>
+                    <a className='bookingBtn' href="/">Language</a>
+
                 </div>
 
                 <div className='textBox'>

@@ -35,7 +35,9 @@
 }
 
 .textBox a:hover {
-  color: #0066cc; /* subtle blue hover */
+  text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.2);
+  font-size:large;
+
 }
 
 .rightSide {
@@ -46,6 +48,7 @@
 
 .menuDiv {
   display: flex;
+  width: 100%;
   align-items: center;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -67,5 +70,11 @@
 
 .bookingBtn
 {
-    
+      background: linear-gradient(to top, #d0d0d0, #ffffff); /* softer gradient */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 24px;
+  border-radius: 30px; /* smoother pill shape */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* subtle glow */
+  color: #333;
 }

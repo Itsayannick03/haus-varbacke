@@ -1,5 +1,6 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import '@fontsource/inter/600.css'; // semi-bold
 
 export function Welcome() {
   return (

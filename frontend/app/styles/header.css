@@ -1,64 +1,58 @@
-.mainHeader
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;;
-    background: linear-gradient(to bottom, #d8d8d8, #ffffff);
-    padding: 0 10px;
-    height: 90px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(to bottom, #f8f8f8, #ffffff); /* softer gradient */
+  padding: 0 20px;
+  height: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* lighter border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);     /* softer shadow */
 }
 
-
-
-.img
-{
-    width: 130px;
-    position: 'fixed';
-    top: '10px';
-  left: '0px';
+.img {
+  width: 120px;
+  height: auto;
 }
 
-.textBox
-{
-    position: absolute;
-    align-items: center;
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%); /* perfect horizontal centering */
- 
-    gap: 40px;
-
-    height: 40px;
-    
- 
+.textBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px; /* more breathing room between links */
+  background: #ffffff; /* cleaner background */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 24px;
+  border-radius: 30px; /* smoother pill shape */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* subtle glow */
 }
 
-.textBox a
-{
-    text-decoration:none;
-  font-weight: bold;
-  color: black;
+.textBox a {
+  text-decoration: none;
+  font-weight: 500; /* slightly lighter, less bulky */
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  transition: color 0.2s ease;
 }
 
-.headerLeftSide
-{
-   
- 
-   
+.textBox a:hover {
+  text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
-.menuDiv
-{
-   
-    display: flex;
-    align-items: center;
+.rightSide {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
-.hamburgerMenu
-{
+.menuDiv {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
+.menuDiv:hover {
+  transform: scale(1.1); /* playful hover effect */
 }

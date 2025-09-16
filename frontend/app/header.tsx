@@ -13,6 +13,10 @@ export function Header()
                 <div>
                     <a href="/">Prices</a>
                 </div>
+
+                <div>
+                    <a href="/">Booking</a>
+                </div>
                 
                 <div>
                     <a href="/">About us</a>
@@ -22,12 +26,15 @@ export function Header()
                 </div>
             </div>
 
-            
-            
+            <div className='rightSide'>
+
                 <div className='menuDiv'>
                     
                     <IoMenu size={40}/>
                 </div>
+            </div>
+            
+                
           
             
            

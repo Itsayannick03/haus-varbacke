@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "aos": "^2.3.4"
+  }
+}

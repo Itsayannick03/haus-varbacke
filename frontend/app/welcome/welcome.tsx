@@ -53,6 +53,7 @@ export function Welcome() {
     )
     })
 
+ 
     images.forEach((el: any) => {
       gsap.fromTo(
       el,
@@ -69,20 +70,6 @@ export function Welcome() {
       }
     )
     })
-
-
-
-    
-
-
-
-
-    
-
-    
-
-    
-    
 
   },[]);
 
@@ -105,23 +92,27 @@ export function Welcome() {
   }, []);
 
   return (
-  <div className="text-stroke">
-    <div className="relative ">
+  <div className="text-stroke ">
+    <div className="relative overflow-hidden">
       
       <div >
-        <img  src="stad.jpg" alt=""/>  
+        <img className="w-screen h-screen object-cover"  src="stad.jpg" alt=""/>  
         <div ref={textRef1}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
               
           <p >Herzlich Willkommen in Haus Vårbacke!</p>
           <p >oder wie man auf schwedisch sagt</p>
           <p className="italic">"Välkomna till hus vårbacke!"</p>
+          <button className="btn">
+          Hier Buchen!
+        </button>
         </div>
+        
         
       </div>
     </div>
 
     <div  className="relative">
-      <img className="fade-image" src="hus.JPG" alt="" />
+      <img className="fade-image w-screen h-screen object-cover" src="hus.JPG" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Ein Zuhause auf dem Frühlingshügel.</p>
         <p>Ruhe, Natur und Raum für die ganze Familie</p>
@@ -133,7 +124,7 @@ export function Welcome() {
     </div>
 
     <div  className="relative">
-      <img className="fade-image"  src="see.jpg" alt="" />
+      <img className="fade-image w-screen h-screen object-cover"  src="see.jpg" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Entdecke die Natur </p>
         <p>in und um Totebo</p>
@@ -145,7 +136,7 @@ export function Welcome() {
     </div>
 
     <div  className="relative">
-      <img className="fade-image" src="family.jpg" alt="" />
+      <img className="fade-image w-screen h-screen object-cover" src="family.jpg" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Die Reise nach Totebo </p>
         <p>der Beginn deines Abenteuers</p>

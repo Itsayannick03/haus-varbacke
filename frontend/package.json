@@ -11,7 +11,9 @@
   "dependencies": {
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "@studio-freight/lenis": "^1.0.42",
     "isbot": "^5.1.27",
+    "locomotive-scroll": "^4.1.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1"

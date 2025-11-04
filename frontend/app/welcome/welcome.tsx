@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,9 @@ export function Welcome() {
   const imgRef3 = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    const texts = gsap.utils.toArray(".fade-text");
+    const images = gsap.utils.toArray(".fade-image")
+
     gsap.fromTo(
       textRef1.current,
       {
@@ -30,13 +34,16 @@ export function Welcome() {
         ease: "power2.out", // nice easing curve
       }
     );
-    gsap.fromTo(
-      textRef2.current,
+
+
+    texts.forEach((el: any) => {
+      gsap.fromTo(
+      el,
       {autoAlpha: 0, y: 50},
       {
         autoAlpha: 1, y:0,
         scrollTrigger: {
-          trigger: textRef2.current,
+          trigger: el,
           start: "top 50%",
           end: "top 10%",
           scrub: 1.5,
@@ -44,29 +51,16 @@ export function Welcome() {
         },
       }
     )
+    })
 
-    gsap.fromTo(
-      textRef3.current,
-      {autoAlpha: 0, y: 50},
-      {
-        autoAlpha: 1, y:0,
-        scrollTrigger: {
-          trigger: textRef3.current,
-          start: "top 50%",
-          end: "top 10%",
-          scrub: 1.5,
-          markers: true
-        },
-      }
-    )
-
-    gsap.fromTo(
-      imgRef2.current,
+    images.forEach((el: any) => {
+      gsap.fromTo(
+      el,
       {autoAlpha: 0},
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: imgRef2.current,
+          trigger: el,
           start: "top 90%",
           end: "top 30%",
           scrub: 1.5,
@@ -74,22 +68,41 @@ export function Welcome() {
         },
       }
     )
+    })
 
-    gsap.from(
-      imgRef3.current,
-      {
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: imgRef3.current,
-          start: "top 90%",
-          end: "top 30%",
-          scrub: 1.5,
-          markers: false
-        },
-      }
-    )
+
+
+    
+
+
+
+
+    
+
+    
+
+    
+    
 
   },[]);
+
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2,
+      
+      smoothWheel: true,
+      
+
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
   <div className="text-stroke">
@@ -108,8 +121,8 @@ export function Welcome() {
     </div>
 
     <div  className="relative">
-      <img ref={imgRef2} src="hus.JPG" alt="" />
-      <div ref={textRef2}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+      <img className="fade-image" src="hus.JPG" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Ein Zuhause auf dem Frühlingshügel.</p>
         <p>Ruhe, Natur und Raum für die ganze Familie</p>
         <button className="btn">
@@ -120,8 +133,8 @@ export function Welcome() {
     </div>
 
     <div  className="relative">
-      <img ref={imgRef3}  src="see.jpg" alt="" />
-      <div ref={textRef3}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+      <img className="fade-image"  src="see.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Entdecke die Natur </p>
         <p>in und um Totebo</p>
         <button className="btn">
@@ -130,6 +143,19 @@ export function Welcome() {
 
       </div>
     </div>
+
+    <div  className="relative">
+      <img className="fade-image" src="family.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Die Reise nach Totebo </p>
+        <p>der Beginn deines Abenteuers</p>
+        <button className="btn">
+          Anreise nach Totebo
+        </button>
+
+      </div>
+    </div>
+
   </div>
   
   )

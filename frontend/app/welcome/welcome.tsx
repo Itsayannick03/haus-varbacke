@@ -2,16 +2,102 @@ import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 import "../styles/welcome.css"
 import "aos/dist/aos.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
 
 export function Welcome() {
+  const textRef1 = useRef<HTMLDivElement>(null);
+  const textRef2 = useRef<HTMLDivElement>(null);
+  const textRef3 = useRef<HTMLDivElement>(null);
+
+  const imgRef2 = useRef<HTMLImageElement>(null);
+  const imgRef3 = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      textRef1.current,
+      {
+        autoAlpha: 0,     // start fully invisible
+        y: 30,            // slight motion from below
+      },
+      {
+        autoAlpha: 1,     // full visibility
+        y: 0,             // back to normal position
+        duration: 2.5,    // smooth timing
+        ease: "power2.out", // nice easing curve
+      }
+    );
+    gsap.fromTo(
+      textRef2.current,
+      {autoAlpha: 0, y: 50},
+      {
+        autoAlpha: 1, y:0,
+        scrollTrigger: {
+          trigger: textRef2.current,
+          start: "top 50%",
+          end: "top 10%",
+          scrub: 1.5,
+          markers: false
+        },
+      }
+    )
+
+    gsap.fromTo(
+      textRef3.current,
+      {autoAlpha: 0, y: 50},
+      {
+        autoAlpha: 1, y:0,
+        scrollTrigger: {
+          trigger: textRef3.current,
+          start: "top 50%",
+          end: "top 10%",
+          scrub: 1.5,
+          markers: true
+        },
+      }
+    )
+
+    gsap.fromTo(
+      imgRef2.current,
+      {autoAlpha: 0},
+      {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: imgRef2.current,
+          start: "top 90%",
+          end: "top 30%",
+          scrub: 1.5,
+          markers: false
+        },
+      }
+    )
+
+    gsap.from(
+      imgRef3.current,
+      {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: imgRef3.current,
+          start: "top 90%",
+          end: "top 30%",
+          scrub: 1.5,
+          markers: false
+        },
+      }
+    )
+
+  },[]);
+
   return (
   <div className="text-stroke">
     <div className="relative ">
       
       <div >
         <img  src="stad.jpg" alt=""/>  
-        <div data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="linear"  className="absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <div ref={textRef1}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
               
           <p >Herzlich Willkommen in Haus Vårbacke!</p>
           <p >oder wie man auf schwedisch sagt</p>
@@ -21,14 +107,26 @@ export function Welcome() {
       </div>
     </div>
 
-    <div className="relative">
-      <img data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-offset="30" data-aos-once="true" data-aos-easing="linear" src="hus.JPG" alt="" />
-      <div className="absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+    <div  className="relative">
+      <img ref={imgRef2} src="hus.JPG" alt="" />
+      <div ref={textRef2}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Ein Zuhause auf dem Frühlingshügel.</p>
-        <p>Ruhe, Natur und Raum für die ganze Familie.</p>
+        <p>Ruhe, Natur und Raum für die ganze Familie</p>
         <button className="btn">
-  Mehr über das Haus
-</button>
+          Mehr über das Haus
+        </button>
+
+      </div>
+    </div>
+
+    <div  className="relative">
+      <img ref={imgRef3}  src="see.jpg" alt="" />
+      <div ref={textRef3}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Entdecke die Natur </p>
+        <p>in und um Totebo</p>
+        <button className="btn">
+          Totebo und die Umgebung
+        </button>
 
       </div>
     </div>

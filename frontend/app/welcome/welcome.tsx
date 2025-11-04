@@ -76,8 +76,8 @@ export function Welcome() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2,
-      
+      duration: 1.5,
+      easing: (t) => 1 - Math.pow(1 - t, 2),
       smoothWheel: true,
       
 
@@ -92,10 +92,10 @@ export function Welcome() {
   }, []);
 
   return (
-  <div className="text-stroke ">
+  <div className="text-stroke snap-y snap-mandatory">
     <div className="relative overflow-hidden">
       
-      <div >
+      <section className="snap-start relative w-screen h-screen overflow-hidden">
         <img className="w-screen h-screen object-cover"  src="stad.jpg" alt=""/>  
         <div ref={textRef1}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
               
@@ -108,10 +108,10 @@ export function Welcome() {
         </div>
         
         
-      </div>
+      </section>
     </div>
 
-    <div  className="relative">
+    <section className="snap-start relative w-screen h-screen overflow-hidden" >
       <img className="fade-image w-screen h-screen object-cover" src="hus.JPG" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Ein Zuhause auf dem Frühlingshügel.</p>
@@ -121,9 +121,9 @@ export function Welcome() {
         </button>
 
       </div>
-    </div>
+    </section>
 
-    <div  className="relative">
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
       <img className="fade-image w-screen h-screen object-cover"  src="see.jpg" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Entdecke die Natur </p>
@@ -133,9 +133,9 @@ export function Welcome() {
         </button>
 
       </div>
-    </div>
+    </section>
 
-    <div  className="relative">
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
       <img className="fade-image w-screen h-screen object-cover" src="family.jpg" alt="" />
       <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
         <p>Die Reise nach Totebo </p>
@@ -145,7 +145,31 @@ export function Welcome() {
         </button>
 
       </div>
-    </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="mammaPappa.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Alles, was ihr </p>
+        <p>über uns wissen solltet</p>
+        <button className="btn">
+          Über uns
+        </button>
+
+      </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="wedding.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Unser Gästebuch </p>
+        <p>Feedback und Bewertung</p>
+        <button className="btn">
+          Zum Gästebuch
+        </button>
+
+      </div>
+    </section>
 
   </div>
   

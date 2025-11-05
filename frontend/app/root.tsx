@@ -6,6 +6,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -42,6 +45,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    console.log("AOS initialized!");
+    AOS.init({
+      offset: 100,
+      duration: 1500,
+      once: false,
+    });
+  }, []);
+
   return <Outlet />;
 }
 

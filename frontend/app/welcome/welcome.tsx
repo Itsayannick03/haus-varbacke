@@ -1,49 +1,179 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import "../styles/welcome.css"
+import "aos/dist/aos.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+import Lenis from "@studio-freight/lenis";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Welcome() {
+  const textRef1 = useRef<HTMLDivElement>(null);
+  const textRef2 = useRef<HTMLDivElement>(null);
+  const textRef3 = useRef<HTMLDivElement>(null);
+
+  const imgRef2 = useRef<HTMLImageElement>(null);
+  const imgRef3 = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const texts = gsap.utils.toArray(".fade-text");
+    const images = gsap.utils.toArray(".fade-image")
+
+    gsap.fromTo(
+      textRef1.current,
+      {
+        autoAlpha: 0,     // start fully invisible
+        y: 30,            // slight motion from below
+      },
+      {
+        autoAlpha: 1,     // full visibility
+        y: 0,             // back to normal position
+        duration: 2.5,    // smooth timing
+        ease: "power2.out", // nice easing curve
+      }
+    );
+
+
+    texts.forEach((el: any) => {
+      gsap.fromTo(
+      el,
+      {autoAlpha: 0, y: 50},
+      {
+        autoAlpha: 1, y:0,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 50%",
+          end: "top 10%",
+          scrub: 1.5,
+          markers: false
+        },
+      }
+    )
+    })
+
+ 
+    images.forEach((el: any) => {
+      gsap.fromTo(
+      el,
+      {autoAlpha: 0},
+      {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          end: "top 30%",
+          scrub: 1.5,
+          markers: false
+        },
+      }
+    )
+    })
+
+  },[]);
+
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => 1 - Math.pow(1 - t, 2),
+      smoothWheel: true,
+      
+
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <main className="flex items-center justify-center pt-16 pb-4">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <header className="flex flex-col items-center gap-9">
-          <div className="w-[500px] max-w-[100vw] p-4">
-            <img
-              src={logoLight}
-              alt="React Router"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src={logoDark}
-              alt="React Router"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
-        <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
-            </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+  <div className="text-stroke snap-y snap-mandatory">
+    <div className="relative overflow-hidden">
+      
+      <section className="snap-start relative w-screen h-screen overflow-hidden">
+        <img className="w-screen h-screen object-cover"  src="stad.jpg" alt=""/>  
+        <div ref={textRef1}  className="text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+              
+          <p >Herzlich Willkommen in Haus Vårbacke!</p>
+          <p >oder wie man auf schwedisch sagt</p>
+          <p className="italic">"Välkomna till hus vårbacke!"</p>
+          <button className="btn">
+          Hier Buchen!
+        </button>
         </div>
+        
+        
+      </section>
+    </div>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden" >
+      <img className="fade-image w-screen h-screen object-cover" src="hus.JPG" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Ein Zuhause auf dem Frühlingshügel.</p>
+        <p>Ruhe, Natur und Raum für die ganze Familie</p>
+        <button className="btn">
+          Mehr über das Haus
+        </button>
+
       </div>
-    </main>
-  );
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover"  src="see.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Entdecke die Natur </p>
+        <p>in und um Totebo</p>
+        <button className="btn">
+          Totebo und die Umgebung
+        </button>
+
+      </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="family.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Die Reise nach Totebo </p>
+        <p>der Beginn deines Abenteuers</p>
+        <button className="btn">
+          Anreise nach Totebo
+        </button>
+
+      </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="mammaPappa.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Alles, was ihr </p>
+        <p>über uns wissen solltet</p>
+        <button className="btn">
+          Über uns
+        </button>
+
+      </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="wedding.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Unser Gästebuch </p>
+        <p>Feedback und Bewertung</p>
+        <button className="btn">
+          Zum Gästebuch
+        </button>
+
+      </div>
+    </section>
+
+  </div>
+  
+  )
 }
 
 const resources = [

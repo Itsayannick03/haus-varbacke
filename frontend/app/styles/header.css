@@ -1,0 +1,47 @@
+.header-wraper
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: rgba(255, 0, 0, 0);
+    height: 100px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px ;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.8);
+}
+
+.blur-bg {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional translucent background */
+}
+
+.hdr-btn
+{
+padding: 12px 28px;
+  background-color: #ffffff; /* Deep natural green */
+  color: #000000; /* Off-white */
+ 
+  border-radius: 9999px; /* fully rounded pill shape */
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* smooth animation */
+
+
+}
+
+.hdr-btn:hover
+{
+    transform:  scale(1.05);
+    box-shadow: 0 0px 7px inset rgba(0, 0, 0, 0.2);
+}
+

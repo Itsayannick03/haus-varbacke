@@ -147,17 +147,7 @@ export function Welcome() {
       </div>
     </section>
 
-    <section className="snap-start relative w-screen h-screen overflow-hidden">
-      <img className="fade-image w-screen h-screen object-cover" src="mammaPappa.jpg" alt="" />
-      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
-        <p>Alles, was ihr </p>
-        <p>über uns wissen solltet</p>
-        <button className="btn">
-          Über uns
-        </button>
-
-      </div>
-    </section>
+    
 
     <section className="snap-start relative w-screen h-screen overflow-hidden">
       <img className="fade-image w-screen h-screen object-cover" src="wedding.jpg" alt="" />
@@ -166,6 +156,18 @@ export function Welcome() {
         <p>Feedback und Bewertung</p>
         <button className="btn">
           Zum Gästebuch
+        </button>
+
+      </div>
+    </section>
+
+    <section className="snap-start relative w-screen h-screen overflow-hidden">
+      <img className="fade-image w-screen h-screen object-cover" src="mammaPappa.jpg" alt="" />
+      <div   className="fade-text text-7xl flex-shrink-0 whitespace-nowrap absolute inset-0 flex flex-col space-y-4 justify-center items-center text-white text-7xl font-bold tracking-wide drop-shadow text-shadow ">
+        <p>Alles, was ihr </p>
+        <p>über uns wissen solltet</p>
+        <button className="btn">
+          Über uns
         </button>
 
       </div>

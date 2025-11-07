@@ -45,3 +45,14 @@ padding: 12px 28px;
     box-shadow: 0 0px 7px inset rgba(0, 0, 0, 0.2);
 }
 
+.icon
+{
+  transition: transform 0.2s ease; /* smooth animation */
+}
+
+.icon:hover
+{
+  transform: scale(1.2);
+}
+
+

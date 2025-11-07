@@ -26,10 +26,9 @@ export function Header()
                 <a href="#gastebuch" className="hover:text-gray-600">Gästebuch</a>
 
                 <a href="#uberUns" className="hover:text-gray-600">Über Uns</a>
-                
             </div>
             
-           
+                           
         </nav>
 
         <div className=" absolute right-5 flex items-center space-x-6 text-black">

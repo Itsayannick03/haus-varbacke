@@ -1,6 +1,10 @@
 import { InfoCard } from "./infoCard";
 import { AiOutlineEuro } from "react-icons/ai";
 import { BsHandbag } from "react-icons/bs";
+import { IoCalendarNumberOutline } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
+
+
 export function House()
 {
     return(
@@ -14,10 +18,22 @@ export function House()
                     icon={<AiOutlineEuro />}
                 />
                 <InfoCard
+                    icon={<BsHandbag />}
                     title="Ausstattungen"
                     description="Entdecken Sie, was unser Haus bietet"
                     buttonText="Mehr erfahren"
-                    icon={<BsHandbag />}
+                />
+                <InfoCard
+                    icon={<IoDocumentTextOutline />}
+                    title="Hausregeln"
+                    description="Lesen Sie gerne unsere Hausregeln durch."
+                    buttonText="Mehr erfahren"
+                />
+                <InfoCard
+                    icon={<IoCalendarNumberOutline />}
+                    title="Buchung"
+                    description="Alle Informationen zu Buchung und Verfügbarkeit."
+                    buttonText="Mehr erfahren"
                 />
                 
            </div>

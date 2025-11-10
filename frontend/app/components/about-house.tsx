@@ -1,4 +1,5 @@
 import { InfoCard } from "./infoCard";
+import { ImageCard } from "./ImageCard";
 import { AiOutlineEuro } from "react-icons/ai";
 import { BsHandbag } from "react-icons/bs";
 import { IoCalendarNumberOutline } from "react-icons/io5";
@@ -36,6 +37,22 @@ export function House()
                     buttonText="Mehr erfahren"
                 />
                 
+           </div>
+
+           <div className="w-full h-full px-10 ">
+            <ImageCard
+                image="haus1.jpg"
+                headText="Haus"
+                subtext="asd"
+                
+            />
+            <ImageCard
+                image="haus1.jpg"
+                headText="Haus"
+                subtext="asd"
+                reverse
+            />
+            
            </div>
         </div>
     )

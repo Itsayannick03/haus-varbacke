@@ -6,21 +6,50 @@
 .btn
 {
  padding: 12px 28px;
-  background-color: #567c5e; /* Deep natural green */
-  color: #f8f9f4; /* Off-white */
-  border: 2px solid #4a6851; /* Subtle darker green border */
+  background-color: #eae6dc; /* Deep natural green */
+  color: #4a4a4a; /* Off-white */
+  border: 2px solid #cfc8b5; /* Subtle darker green border */
   border-radius: 9999px; /* fully rounded pill shape */
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+
+
 }
 
 .btn:hover
 {
-    background-color: #6e9170; /* Lighter green on hover */
-  border-color: #6e9170;
-  transform: translateY(-2px); /* slight lift effect */
-  box-shadow: 0px 5px 5px inset rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px inset rgba(0, 0, 0, 0.2);
+
+  background-color: #eee7d5;
+
+  transform: translateY(-4px); /* slight lift effect */
 }
+
+.shadow-btn
+{
+   transition: all 0.25s ease-in-out;
+}
+
+.shadow-btn:hover
+{
+  transform: translateY(-4px); /* slight lift effect */
+  text-shadow: 0px -7px 3px rgba(0, 0, 0, 0.6);
+}
+
+.mirror {
+  position: relative;
+  display: inline-block;
+  color: #333;
+   transition: all 0.35s ease-in-out;
+ 
+}
+
+.mirror:hover
+{
+  transform: translateY(-4px); /* slight lift effect */
+  text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+

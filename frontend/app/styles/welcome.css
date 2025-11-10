@@ -64,3 +64,14 @@
   transform: translateY(-4px); /* slight lift effect */
 }
 
+.box
+{
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s ease-in-out;
+}
+
+.box:hover
+{
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05)
+}

@@ -14,7 +14,7 @@ export function Header()
             
             <div className="flex-row space-x-10">
                 <a href="/" className="hover:text-gray-600">Home</a>
-                <a href="#uberHaus" className="hover:text-gray-600">Über das Haus</a>
+                <a href="/house" className="hover:text-gray-600">Über das Haus</a>
                 
 
             </div>

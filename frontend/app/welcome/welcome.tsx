@@ -73,24 +73,8 @@ export function Welcome() {
 
   },[]);
 
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.5,
-      easing: (t) => 1 - Math.pow(1 - t, 2),
-      smoothWheel: true,
-      
-
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
+  
+  
   return (
   <div className="text-stroke snap-y snap-mandatory">
     <div className="relative overflow-hidden">

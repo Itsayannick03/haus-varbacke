@@ -13,19 +13,19 @@ export function Header()
         <nav className=" font-serif text-xl text-gray-800 flex flex-col justify-baseline  items-center text-lg">
             
             <div className="flex-row space-x-10">
-                <a href="/" className="hover:text-gray-600">Home</a>
-                <a href="#uberHaus" className="hover:text-gray-600">Über das Haus</a>
+                <a href="/" className="mirror">Home</a>
+                <a href="#uberHaus" className="mirror">Über das Haus</a>
                 
 
             </div>
 
             <div className="flex-row space-x-5">
-                <a href="#umgebung" className="hover:text-gray-600">Umgebung</a>
+                <a href="#umgebung" className="mirror" >Umgebung</a>
 
-                <a href="#anreise" className="hover:text-gray-600">Anreise</a>
-                <a href="#gastebuch" className="hover:text-gray-600">Gästebuch</a>
+                <a href="#anreise" className="mirror" >Anreise</a>
+                <a href="#gastebuch" className="mirror" >Gästebuch</a>
 
-                <a href="#uberUns" className="hover:text-gray-600">Über Uns</a>
+                <a href="#uberUns" className="mirror" >Über Uns</a>
             </div>
             
                            

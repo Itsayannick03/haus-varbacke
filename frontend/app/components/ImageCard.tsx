@@ -1,4 +1,4 @@
-import { reverse } from "dns";
+
 
 type ImageCardProps = {
     image: string;

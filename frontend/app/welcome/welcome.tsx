@@ -6,10 +6,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Welcome() {
+  const [expanded, setExpanded] = useState(false);
   const textRef1 = useRef<HTMLDivElement>(null);
   const textRef2 = useRef<HTMLDivElement>(null);
   const textRef3 = useRef<HTMLDivElement>(null);

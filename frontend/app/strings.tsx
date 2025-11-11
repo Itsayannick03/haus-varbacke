@@ -6,18 +6,18 @@ zuzüglich Endreinigungspauschale.
 
 ──────────────────────────────
 Nebensaison
-06.09.2025 – 06.06.2026
-→ 500 € pro Woche
+06.09.2025 → 06.06.2026:
+500 € pro Woche
 
 ──────────────────────────────
 Hauptsaison
-06.06.2026 – 05.09.2026
-→ 700 € pro Woche
+06.06.2026 → 05.09.2026:
+700 € pro Woche
 
 ──────────────────────────────
 Verlängerungen & Kurzaufenthalte
 Verlängerungstage oder Buchungen unter einer Woche:
-→ 100 € pro Tag
+100 € pro Tag
 
 ──────────────────────────────
 Endreinigung
@@ -63,4 +63,46 @@ Preise:
 
 Maximale Teilnehmerzahl pro Tour:  
 5 Personen (2 Erwachsene + 3 Kinder)
+`;
+
+
+export const hausregeln = `
+Hausordnung – Kurzfassung
+
+Bitte behandelt das Haus und Inventar sorgfältig,  
+damit auch zukünftige Gäste einen angenehmen Aufenthalt haben.
+
+──────────────────────────────
+Schuhe  
+Nicht mit Straßenschuhen betreten – Holzböden sind empfindlich.
+
+──────────────────────────────
+Rauchen  
+Nichtraucherhaus – Rauchen im Haus ist nicht gestattet.
+
+──────────────────────────────
+Küche & Bad  
+Geschirr nur sauber einräumen.  
+Keine Abfälle in Spül- oder Toilettenbecken entsorgen.  
+Nur 2-lagiges Toilettenpapier verwenden.
+
+──────────────────────────────
+Fenster & Türen  
+Beim Verlassen bitte alles schließen.  
+Fenster mit Haken sichern.
+
+──────────────────────────────
+Außenbereich & Waschkeller  
+Sitzpolster nach Gebrauch ins Haus legen.  
+Nach dem Waschen Netzstecker ziehen und Wasserhahn zudrehen.
+
+──────────────────────────────
+Abreise  
+Haus bis 10 Uhr verlassen, Kühlschrank leeren (nicht ausschalten),  
+alle Geräte ausschalten, Fenster & Türen schließen, Schlüssel abgeben.
+
+──────────────────────────────
+Die vollständige Hausordnung  
+findet ihr im Informationsordner im Haus oder unter  
+www.haus-varbacke.se
 `;

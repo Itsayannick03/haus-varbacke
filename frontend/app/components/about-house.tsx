@@ -10,7 +10,7 @@ import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 
-import {preise, extras} from "../strings"
+import {preise, extras, hausregeln} from "../strings"
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -74,16 +74,13 @@ export function House()
                 <InfoCard
                     icon={<IoDocumentTextOutline />}
                     title="Hausregeln"
-                    description="Lesen Sie gerne unsere Hausregeln durch."
+                    description="Lesen Sie hier unsere Hausordnung und Abreisehinweise."
+                    information={hausregeln}
                     expanded={regelExpanded}
+                    onClick={() => setRegel(!regelExpanded)}
                     
                 />
-                <InfoCard
-                    icon={<IoCalendarNumberOutline />}
-                    title="Buchung"
-                    description="Alle Informationen zu Buchung und Verfügbarkeit."
-                    expanded={false}
-                />
+                
                 
            </div>
 

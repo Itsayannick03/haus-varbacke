@@ -159,7 +159,7 @@ export function House()
                 subtext="Zwischen den Ästen bieten die Turnringe Bewegung und Spaß ideal für kleine und große Akrobaten."
             />
             <ImageCard
-            
+                
                 image="leiter.jpg"
                 headText="Strickleiter im Grünen"
                 subtext="Neben Schaukel und Turnringen sorgt auch die Strickleiter für Abwechslung.
@@ -168,20 +168,16 @@ Für ausreichend Spielmöglichkeiten ist also gesorgt!"
 
             <ImageCard
               reverse
-                image="aussen5.jpg"
-                headText="Ein weiterer Sitzplatz auf der oberen Terrassenebene"
-                subtext="Neben dem bereits gezeigten Sitzbereich gibt es hier auf der obersten Ebene des Gartens einen weiteren, ruhig gelegenen Platz. Über eine kleine Natursteintreppe gelangt man hinauf zu diesem lauschigen Ort – ideal, um bei Sonne oder im Schatten der Bäume zu entspannen, zu lesen oder gemeinsam zu essen. Umgeben von Grün und mit Blick auf das Haus lässt sich hier wunderbar verweilen."
+                image="bike.jpg"
+                headText="Fahräder für gross und klein."
+                subtext="Erwachsenen- und zahlreiche Kinderfahrräder unterschiedlicher Grössen samt Lauflernrad, Roller und Inline-Skates sind im Haus vorhanden und können von euch kostenlos mitbenutzt werden."
             />
              <ImageCard
-                image="ring.jpg"
-                headText="Turnringe im Apfelbaum"
-                subtext="Zwischen den Ästen bieten die Turnringe Bewegung und Spaß ideal für kleine und große Akrobaten."
+                image="boat.JPG"
+                headText="Das hier ist unser Ruderboot 'Luna'"
+                subtext="welches ihr gerne kostenlos mitbenutzen dürft, um damit einen Bootsausflug auf dem Nässjön zu unternehmen. Mit einer Länge von 4,30m bietet es ausreichend Platz für 4 Erwachsene. Kinderschwimmweste ist ebenfalls vorhanden"
             />
-             <ImageCard
-                image="ring.jpg"
-                headText="Turnringe im Apfelbaum"
-                subtext="Zwischen den Ästen bieten die Turnringe Bewegung und Spaß ideal für kleine und große Akrobaten."
-            />
+            
            
             
             

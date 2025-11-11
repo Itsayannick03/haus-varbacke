@@ -35,8 +35,11 @@ Nebenkosten
 → In der Nebensaison nach Verbrauch:
    • Strom: 0,40 €/kWh
    • Wasser: 5,00 €/m³
+`;
 
-   Handtuch- und Bettwäscheservice  
+
+export const extras = `
+Handtuch- und Bettwäscheservice  
 Bestehend aus Bettwäsche (Laken, Kopfkissen- und Bettdeckenbezug),  
 2 kleinen Handtüchern, 1 großem Badetuch sowie 2 Küchentüchern  
 → 8 € / Woche
@@ -52,7 +55,6 @@ Wir fahren gemütlich zu einer der vielen einsamen Inseln vor Västervik,
 wo wir euch zu einem typisch schwedischen *Fika* einladen.  
 Es besteht die Möglichkeit zu baden oder Schleppreifen zu fahren,  
 bevor wir wieder nach Västervik zurückkehren.
-
 
 Preise:  
 → 300 kr (30 €) pro Erwachsener  

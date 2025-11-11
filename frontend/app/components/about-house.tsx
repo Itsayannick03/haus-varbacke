@@ -10,7 +10,7 @@ import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 
-import {preise} from "../strings"
+import {preise, extras} from "../strings"
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +66,9 @@ export function House()
                     icon={<BsHandbag />}
                     title="Ausstattungen"
                     description="Entdecken Sie, was unser Haus bietet"
+                    information={extras}
                     expanded = {ausExpanded}
+                    onClick={() => setAus(!ausExpanded)}
                    
                 />
                 <InfoCard

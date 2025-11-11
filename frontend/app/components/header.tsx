@@ -33,13 +33,7 @@ export function Header()
 
         <div className=" absolute right-5 flex items-center space-x-6 text-black">
             <button className="btn">Hier Buchen!</button>
-            <div className="size-10">
-                <a className="inline-block transform transition-transform duration-700 hover:scale-120" href="#profile">
-                    <FaUserCircle size={40}/>
-                </a>
-                
-
-            </div>
+            
         </div>
         
     </header>

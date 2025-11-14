@@ -4,39 +4,40 @@ import { FaUserCircle } from "react-icons/fa";
 export function Header()
 {
     return(
-    <header className="font-sans fixed top-0 left-0 w-full h-20 
-                       bg-white/30 backdrop-blur-lg z-50 
-                       flex items-center px-6">
+    <header className="font-sans fixed text-white absolute top-0 left-0 w-full h-25 bg-white/30 backdrop-blur-lg z-50 flex  items-center justify-center">
         
-        {/* Left section — LOGO */}
-        <div className="flex-shrink-0">
-            <img 
-                className="w-auto h-20  object-contain" 
-                src="logo.png" 
-                alt="Ferienhaus Vårbacke Logo" 
-            />
-        </div>
-
-        {/* Center section — NAVIGATION */}
-        <nav className="flex-1 font-serif text-gray-800 text-lg flex flex-col items-center">
-            <div className="flex space-x-10">
+        <img className=" h-full w-auto   fixed left-5" src="logo.png" alt="" />
+      
+    
+        
+        <nav className=" font-serif text-xl text-gray-800 flex flex-col justify-baseline  items-center text-lg">
+            
+            <div className="flex-row space-x-10">
                 <a href="/" className="mirror">Home</a>
-                <a href="#uberHaus" className="mirror">Über das Haus</a>
+                <a href="/house" className="mirror">Über das Haus</a>
+                
+
             </div>
 
-            <div className="flex space-x-5">
-                <a href="#umgebung" className="mirror">Umgebung</a>
-                <a href="#anreise" className="mirror">Anreise</a>
-                <a href="#gastebuch" className="mirror">Gästebuch</a>
-                <a href="#uberUns" className="mirror">Über Uns</a>
+            <div className="flex-row space-x-5">
+                <a href="#umgebung" className="mirror" >Umgebung</a>
+
+                <a href="#anreise" className="mirror" >Anreise</a>
+                <a href="#gastebuch" className="mirror" >Gästebuch</a>
+
+                <a href="#uberUns" className="mirror" >Über Uns</a>
             </div>
+            
+                           
         </nav>
 
-        {/* Right section — Button */}
-        <div className="flex-shrink-0">
-            <button className="btn text-black">Hier Buchen!</button>
+        <div className=" absolute right-5 flex items-center space-x-6 text-black">
+            <button className="btn">Hier Buchen!</button>
+            
         </div>
-
+        
     </header>
+
+        
     )
 }

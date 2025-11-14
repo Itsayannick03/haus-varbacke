@@ -4,7 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 export function Header()
 {
     return(
-    <header className="font-sans fixed text-white absolute top-0 left-0 w-full h-25 bg-white/30 backdrop-blur-lg z-50 flex  items-center justify-center">
+    <header className="font-sans fixed text-white absolute top-0 left-0 w-full h-25  bg-white/30 backdrop-blur-lg z-50 flex  items-center justify-center">
         
         <img className=" h-full w-auto   fixed left-5" src="logo.png" alt="" />
       

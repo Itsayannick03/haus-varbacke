@@ -35,11 +35,11 @@ export function House()
     ease: "power3.out",
     scrollTrigger: {
       trigger: el,
-      start: "top 80%",        // adjust if needed
-      end: "top 50%",
+      start: "top 90%",        // adjust if needed
+      end: "top 30%",
 
-      scrub: true,
-      markers: true
+      scrub: 2,
+      markers: false
     }}
       
     )
@@ -47,8 +47,8 @@ export function House()
   }, [])
 
   useEffect(() => {
-    const texts = gsap.utils.toArray(".fade-text-reverse");
-    texts.forEach((el: any) => {
+    const revTexts = gsap.utils.toArray(".fade-text-reverse");
+    revTexts.forEach((el: any) => {
       gsap.fromTo(
       el,
       { autoAlpha: 0, x: 200 },   // start left
@@ -59,9 +59,9 @@ export function House()
     ease: "power3.out",
     scrollTrigger: {
       trigger: el,
-      start: "top 80%",        // adjust if needed
-         end: "top 50%",
-      scrub: true,
+      start: "top 70%",        // adjust if needed
+         end: "top 10%",
+      scrub: 2,
       markers: false
     }}
       

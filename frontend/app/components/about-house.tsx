@@ -21,6 +21,54 @@ export function House()
     const [ausExpanded, setAus] = useState(false);
     const [regelExpanded, setRegel] = useState(false);
     
+
+    useEffect(() => {
+    const texts = gsap.utils.toArray(".fade-text");
+    texts.forEach((el: any) => {
+      gsap.fromTo(
+      el,
+      { autoAlpha: 0, x: -200 },   // start left
+  {
+    autoAlpha: 1,
+    x: 0,                      // end at normal position
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 90%",        // adjust if needed
+      end: "top 30%",
+
+      scrub: 2,
+      markers: false
+    }}
+      
+    )
+    })
+  }, [])
+
+  useEffect(() => {
+    const revTexts = gsap.utils.toArray(".fade-text-reverse");
+    revTexts.forEach((el: any) => {
+      gsap.fromTo(
+      el,
+      { autoAlpha: 0, x: 200 },   // start left
+  {
+    autoAlpha: 1,
+    x: 0,                      // end at normal position
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 70%",        // adjust if needed
+         end: "top 10%",
+      scrub: 2,
+      markers: false
+    }}
+      
+    )
+    })
+  }, [])
+
     useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -74,7 +122,7 @@ export function House()
                 <InfoCard
                     icon={<IoDocumentTextOutline />}
                     title="Hausregeln"
-                    description="Lesen Sie hier unsere Hausordnung und Abreisehinweise."
+                    description="Lesen Sie hier unsere Hausordnung."
                     information={hausregeln}
                     expanded={regelExpanded}
                     onClick={() => setRegel(!regelExpanded)}
@@ -84,20 +132,24 @@ export function House()
                 
            </div>
 
-           <div className="w-full h-full px-10 whitespace-pre-line fade-text">
-            <ImageCard
+           <div className="w-full h-full px-10 whitespace-pre-line">
+          
+                <ImageCard
                 image="haus1.jpg"
                 headText="Willkommen im Ferienhaus Vårbacke"
                 subtext={"Hier seht ihr das Haus von der Einfahrt aus mit Blick auf die Südseite. \n Solltet ihr im Spätsommer zu uns kommen, könnt ihr euch natürlich gerne soviele Äpfel pflücken, wie ihr essen könnt."}
                 
             />
+       
             
-            <ImageCard
-                image="sitzplats.jpg"
-                headText="Gemütlicher Sitzplatz unter freiem Himmel"
-                subtext={"Direkt unterhalb des oberen Sitzplatzes erstreckt sich der grüne Gartenbereich mit seiner natürlichen Bepflanzung und den kleinen Ebenen. Hier lässt sich wunderbar entspannen, während man den Blick über den Garten und die umliegenden Bäume schweifen lässt. Die verschiedenen Terrassenebenen schaffen eine lebendige, zugleich ruhige Atmosphäre, die den besonderen Charme des Gartens ausmacht."}
-                reverse
-            />
+          
+                <ImageCard
+                    image="sitzplats.jpg"
+                    headText="Gemütlicher Sitzplatz unter freiem Himmel"
+                    subtext={"Direkt unterhalb des oberen Sitzplatzes erstreckt sich der grüne Gartenbereich mit seiner natürlichen Bepflanzung und den kleinen Ebenen. Hier lässt sich wunderbar entspannen, während man den Blick über den Garten und die umliegenden Bäume schweifen lässt. Die verschiedenen Terrassenebenen schaffen eine lebendige, zugleich ruhige Atmosphäre, die den besonderen Charme des Gartens ausmacht."}
+                    reverse
+                />
+         
             <ImageCard
                 image="garten1.jpg"
                 headText="Blick in den Garten nach Süden"

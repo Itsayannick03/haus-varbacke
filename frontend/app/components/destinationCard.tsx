@@ -26,7 +26,7 @@ export function DestinationCard({image, header, description, link}:DestinationCa
                     <p className="text-[#4a4a4a] font-serif leading-relaxed">{description}</p>
                 </div>
                 
-                <a className="bg-[#eae6dc] border-2 border-[#cfc8b5] rounded-lg shadow-md w-full flex items-center justify-center" href={link}>
+                <a className="bg-[#eae6dc] border-2 border-[#cfc8b5] rounded-lg shadow-md w-full flex items-center justify-center hover-button" href={link}>
                     <LuMapPin size={30} />
                 </a>
 

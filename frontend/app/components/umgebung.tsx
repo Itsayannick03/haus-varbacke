@@ -2,62 +2,73 @@ import "../styles/welcome.css"
 import "aos/dist/aos.css";
 import { LuMapPin } from "react-icons/lu";
 import { DestinationCard } from "./destinationCard";
-import "../links"
+import {emil} from "../usables/links"
+import { useRef } from "react";
+import { handlarn, wald, kinder, fussbalTennis } from "~/strings";
+
+
 
 export function Umgebung()
 {
+    const lokalesRef = useRef<HTMLDivElement>(null);
+    
     return(
-    <div className="pt-25 pb-5 gap-5 bg-gradient-to-b from-[#f8f5ef] to-white flex flex-col items-center">
-           
-           <DestinationCard
-            image="logo.png"
-            header="hello"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-                        ligula vel ornare laoreet. Sed semper, sapien at venenatis malesuada,
-                        felis justo feugiat arcu, ut placerat lacus dolor id est. Vestibulum
-                        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                        curae. Curabitur tincidunt eros nec nisl scelerisque, vitae vestibulum
-                        nunc maximus."
-            link="www.google.com"
-           />
-        
-            <div className="p-6 gap-3 w-120 rounded-md border border-1px border-gray-200 shadow-lg flex justify-center items-center flex-col">
-                <div>
-                    <img
-                        src="family.jpg"
-                        alt="description"
-                        className="float-left w-40 h-auto mr-4 mb-2 rounded-lg"
+    <div>
+        <div className="pt-25 pb-5 gap-5 bg-gradient-to-b from-[#f8f5ef] to-whiteflex flex-col">
+
+            <div className="fixed bottom-5 right-5 p-2  flex flex-col w-50 gap-5">
+                <button className="border rounded-xl w-full p-1 shadow-lg" onClick={() => lokalesRef.current?.scrollIntoView({ behavior: "smooth" })}>Lokales</button>
+                
+            </div>
+            
+            <section ref={lokalesRef} className="flex flex-col items-center gap-10 scroll-mt-25">
+                <h1 className="font-serif text-5xl">Totebo und Umgebung</h1>
+                    <DestinationCard
+                        image="handlarn.jpg"
+                        header="Lanthandel"
+                        description={handlarn}
+                        link={emil}
+                    />
+                    <DestinationCard
+                        image="bool.jpg"
+                        header="Kinderspielplatz & Boule-Bahn"
+                        description={kinder}
+                        link={emil}
+                    />
+                    <DestinationCard
+                        image="tennis.JPG"
+                        header="Fußballtennisplatz"
+                        description={fussbalTennis}
+                        link={emil}
+                    />
+                    <DestinationCard
+                        image="tennis.JPG"
+                        header="Fußballtennisplatz"
+                        description="Direkt hinter der Boule-Bahn findet ihr einen Fußballtennisplatz, der sich perfekt für schnelle, sportliche Matches eignet."
+                        link={emil}
+                    />
+                    <DestinationCard
+                        image="wald.jpg"
+                        header="Rasenplatz an der alten Schule"
+                        description="Auf dem Gelände der alten Schule gibt es einen großen Rasenplatz zum freien Fußballspielen."
+                        link={emil}
                     />
 
-                    <h1 className="text-4xl font-serif">
-                        Rubrik
-                    </h1>
-
-                    <p className="text-[#4a4a4a] font-serif leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus
-                        ligula vel ornare laoreet. Sed semper, sapien at venenatis malesuada,
-                        felis justo feugiat arcu, ut placerat lacus dolor id est. Vestibulum
-                        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                        curae. Curabitur tincidunt eros nec nisl scelerisque, vitae vestibulum
-                        nunc maximus.
-                    </p>
-                </div>
-                
-
-                <button className="bg-[#eae6dc] border-2 border-[#cfc8b5] rounded-lg shadow-md w-full flex items-center justify-center hover-button">
-                    <LuMapPin size={30} />
-                </button>
-                
+                    
+            </section>
 
             
-            </div>
-           
-        
-       
-        
-        
-
             
+            
+                
+            
+            
+        
+            
+            
+
+                
+        </div>
     </div>
     )
 }

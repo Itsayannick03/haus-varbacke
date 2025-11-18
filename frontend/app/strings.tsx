@@ -106,3 +106,26 @@ Die vollständige Hausordnung
 findet ihr im Informationsordner im Haus oder unter  
 www.haus-varbacke.se
 `;
+
+
+export const handlarn = `Im Ort befindet sich ein kleiner Lanthandel (Dorfladen).
+Hier bekommt ihr im Grunde alles – von der Glühlampe bis zum Grillfleisch, von frischem Brot bis hin zu alltäglichen Lebensmitteln. Der Laden ist klein, aber sehr gut sortiert und ideal, wenn ihr spontan etwas braucht oder euch für den Tag eindecken möchtet.
+    
+Die Öffnungszeiten des Lanthandels:
+Montag–Freitag: 09:00–18:00 Uhr
+Samstag: 10:00–16:00 Uhr
+Sonntag: 10:00–16:00 Uhr
+
+So habt ihr auch am Wochenende die Möglichkeit, schnell und unkompliziert Einkäufe zu erledigen."`
+
+
+export const wald = `Unweit der alten Schule beginnen mehrere kleine Wanderwege, die euch direkt in die ruhige, typisch småländische Waldlandschaft führen. Ein besonders schöner Rundweg um die historische Schulanlage lässt sich in etwa 45 Minuten bequem erwandern und eignet sich ideal für einen kurzen Ausflug zwischendurch.
+
+Die Umgebung ist geprägt von moosbewachsenen Felsen, dichten Baumgruppen und weichen Waldpfaden. Besonders im Spätsommer entfaltet der Wald seinen eigenen Zauber und lädt zu kleinen Erkundungstouren ein – und mit etwas Glück entdeckt ihr vielleicht sogar einen der „schwedischen Trolle“, die hier der Legende nach zwischen den Felsen wohnen.`
+
+export const kinder = `Direkt gegenüber des Lanthandels befindet sich ein kleiner, gepflegter Kinderspielplatz, der besonders für Familien mit jüngeren Kindern ideal ist. Hier können die Kleinen schaukeln, klettern und sich austoben, während die Erwachsenen ganz in der Nähe entspannen.
+Gleich daneben liegt eine Boule-Bahn, die sich perfekt für eine gemütliche Runde zwischendurch eignet – ob zu zweit, mit der Familie oder als kleines Abendspiel in der Sonne. Die Umgebung ist ruhig, sicher und gut überschaubar, sodass sich hier alle wohlfühlen.`
+
+
+export const fussbalTennis = `Direkt hinter der Boule-Bahn findet ihr einen Fußballtennisplatz, der eine Mischung aus Sport, Spaß und Geschicklichkeit bietet. Das Spiel ähnelt Volleyball, nur wird der Ball mit dem Fuß über ein niedriges Netz gespielt. Der Platz ist ideal für Jugendliche und Erwachsene, die sich gerne sportlich betätigen oder in einer kleinen Gruppe eine lustige Herausforderung suchen.
+Dank seiner offenen Lage ist er schnell zugänglich und bietet genügend Platz für spontane Matches oder kurze Trainingseinheiten.`

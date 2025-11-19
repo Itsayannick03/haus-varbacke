@@ -114,9 +114,7 @@ Hier bekommt ihr im Grunde alles – von der Glühlampe bis zum Grillfleisch, vo
 Die Öffnungszeiten des Lanthandels:
 Montag–Freitag: 09:00–18:00 Uhr
 Samstag: 10:00–16:00 Uhr
-Sonntag: 10:00–16:00 Uhr
-
-So habt ihr auch am Wochenende die Möglichkeit, schnell und unkompliziert Einkäufe zu erledigen."`
+Sonntag: 10:00–16:00 Uhr`
 
 
 export const wald = `Unweit der alten Schule beginnen mehrere kleine Wanderwege, die euch direkt in die ruhige, typisch småländische Waldlandschaft führen. Ein besonders schöner Rundweg um die historische Schulanlage lässt sich in etwa 45 Minuten bequem erwandern und eignet sich ideal für einen kurzen Ausflug zwischendurch.
@@ -124,8 +122,27 @@ export const wald = `Unweit der alten Schule beginnen mehrere kleine Wanderwege,
 Die Umgebung ist geprägt von moosbewachsenen Felsen, dichten Baumgruppen und weichen Waldpfaden. Besonders im Spätsommer entfaltet der Wald seinen eigenen Zauber und lädt zu kleinen Erkundungstouren ein – und mit etwas Glück entdeckt ihr vielleicht sogar einen der „schwedischen Trolle“, die hier der Legende nach zwischen den Felsen wohnen.`
 
 export const kinder = `Direkt gegenüber des Lanthandels befindet sich ein kleiner, gepflegter Kinderspielplatz, der besonders für Familien mit jüngeren Kindern ideal ist. Hier können die Kleinen schaukeln, klettern und sich austoben, während die Erwachsenen ganz in der Nähe entspannen.
+
 Gleich daneben liegt eine Boule-Bahn, die sich perfekt für eine gemütliche Runde zwischendurch eignet – ob zu zweit, mit der Familie oder als kleines Abendspiel in der Sonne. Die Umgebung ist ruhig, sicher und gut überschaubar, sodass sich hier alle wohlfühlen.`
 
 
-export const fussbalTennis = `Direkt hinter der Boule-Bahn findet ihr einen Fußballtennisplatz, der eine Mischung aus Sport, Spaß und Geschicklichkeit bietet. Das Spiel ähnelt Volleyball, nur wird der Ball mit dem Fuß über ein niedriges Netz gespielt. Der Platz ist ideal für Jugendliche und Erwachsene, die sich gerne sportlich betätigen oder in einer kleinen Gruppe eine lustige Herausforderung suchen.
-Dank seiner offenen Lage ist er schnell zugänglich und bietet genügend Platz für spontane Matches oder kurze Trainingseinheiten.`
+export const fussbalTennis = `Direkt hinter der Boule-Bahn findet ihr einen Fußballtennisplatz, der sich perfekt für schnelle, sportliche Matches eignet.
+Die Regeln sind leicht zu verstehen: Der Ball wird – ähnlich wie beim Volleyball – über ein niedriges Netz gespielt, allerdings ausschließlich mit den Füßen. Ob als lockeres Freizeitspiel oder als kleine Herausforderung mit Freunden oder Familie – hier kommt jeder in Bewegung.
+Der Platz ist frei zugänglich und lädt zu spontanen Spielrunden ein, sei es am Vormittag vor einem Ausflug oder als sportlicher Ausgleich zum entspannten Urlaubstag.`
+
+export const fussball = `An der alten Schule findet ihr einen großzügigen Rasenplatz, der sich bestens zum Fußballspielen und für weitere Ballspiele eignet.
+Die offene Fläche bietet reichlich Platz für kleine Turniere, lockere Trainingsrunden oder einfach eine spontane Partie mit der ganzen Familie. Durch seine Lage auf dem ehemaligen Schulgelände besitzt der Platz eine ruhige, sichere Atmosphäre, in der Kinder frei spielen und sich austoben können.
+Ob als kurze Aktivpause zwischen Ausflügen oder als sportliches Highlight des Tages – der Rasenplatz ist jederzeit zugänglich und sorgt für Bewegung und Spaß an der frischen Luft.`
+
+export const Smalspåret = `Totebo verfügt über einen kleinen Bahnhof, der in den Sommermonaten mehrmals täglich von der nostalgischen Schmalspurbahn „Smalspåret“ angefahren wird.
+Die historische Strecke mit einer Spurbreite von 891 mm – auch „drei schwedische Fuß“ genannt – verbindet Västervik mit Hultsfred. Die charakteristischen Schienenbusse aus den 1950er Jahren bieten dabei ein ganz besonderes Fahrerlebnis: gemütlich durch die Wälder und vorbei an Seen, Feldern und kleinen Dörfern Smålands. Eine wunderbare Möglichkeit, dem Alltag für ein paar Stunden zu entfliehen.
+
+Unterwegs besteht die Möglichkeit, an jedem beliebigen Bahnhof ein- oder auszusteigen. In Ankarsrum gibt es meist einen kurzen Aufenthalt von etwa 15 Minuten – perfekt für eine kleine Pause im Bahnhofs-Café, wo „Kaffe och Bullar“ (Kaffee und schwedisches Gebäck) angeboten wird.
+
+Zu besonderen Anlässen wird ein Teil der Strecke sogar von einer alten Dampflokomotive befahren, meist ab Ankarsrum (ca. 20 km Richtung Västervik).
+
+Fahrzeiten und weitere Informationen findet ihr auf der Homepage der Smalspåret.
+
+Ein weiteres Highlight erwartet euch in Hultsfred: Von dort aus kann man auf einer alten Dressinenstrecke rund 12 km nach Målilla fahren. Der Ausflug mit den handbetriebenen Schienen-Draisinen ist ein großer Spaß für die ganze Familie und bietet ein außergewöhnliches Naturerlebnis auf Schienen.
+
+Auch hierzu findet ihr online weitere Informationen.`

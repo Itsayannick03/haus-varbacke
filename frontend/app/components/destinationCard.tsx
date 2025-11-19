@@ -13,7 +13,7 @@ type DestinationCardProps =
 export function DestinationCard({image, header, description, link}:DestinationCardProps)
 {
     return(
-        <div className={`p-6 gap-3 w-120 rounded-xl border border-1px border-gray-200 shadow-lg flex justify-center items-center flex-col bg-white `}>
+        <div className={`p-5 gap-5 w-150 rounded-xl border border-1px border-gray-200 shadow-lg flex justify-between items-center flex-col bg-white `}>
                 <div>
                     <img
                         src={image}
@@ -23,10 +23,10 @@ export function DestinationCard({image, header, description, link}:DestinationCa
 
                     <h1 className="text-4xl font-serif">{header}</h1>
 
-                    <p className="text-[#4a4a4a] font-serif leading-relaxed whitespace-pre-line">{description}</p>
+                    <p className="text-[#4a4a4a] font-serif leading-relaxed whitespace-pre-line ">{description}</p>
                 </div>
                 
-                <a className="bg-[#eae6dc] border-2 border-[#cfc8b5] rounded-lg shadow-md w-full flex items-center justify-center hover-button" href={link}>
+                <a className="bg-[#eae6dc] border-2 border-[#cfc8b5] rounded-lg shadow-md w-full flex items-center justify-center hover-button mt-auto" href={link}>
                     <LuMapPin size={30} />
                 </a>
 

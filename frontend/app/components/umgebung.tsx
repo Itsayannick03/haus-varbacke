@@ -27,7 +27,7 @@ export function Umgebung()
                 <div className="flex flex-col gap-15 pb-5 border-b">
 
                 
-                    <div className="flex flex-row gap-10">
+                    <div className="flex flex-wrap items-start gap-10">
                         <DestinationCard 
                             image="handlarn.jpg"
                             header="Lanthandel"
@@ -37,7 +37,7 @@ export function Umgebung()
                         />
                         <DestinationCard
                             image="bool.jpg"
-                            header="Kinderspielplatz & Boule-Bahn"
+                            header="Spielplatz & Boule-Bahn"
                             description={kinder}
                             link={emil}
                         />
@@ -51,7 +51,7 @@ export function Umgebung()
                     </div>
                 
 
-                    <div className="flex flex-row gap-10">
+                    <div className="flex flex-wrap gap-10 items-start">
                         <DestinationCard
                             image="tennis.JPG"
                             header="Fußballtennisplatz"

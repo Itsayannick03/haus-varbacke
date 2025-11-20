@@ -1,12 +1,10 @@
 import "../styles/welcome.css"
 import "aos/dist/aos.css";
 import { LuMapPin } from "react-icons/lu";
-import { DestinationCard } from "./destinationCard";
 import {emil} from "../usables/links"
 import { useRef } from "react";
 import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret } from "~/strings";
-
-
+import { ImageCard } from "./ImageCard";
 
 export function Umgebung()
 {
@@ -26,69 +24,61 @@ export function Umgebung()
 
                 <div className="flex flex-col gap-15 pb-5 border-b">
 
-                
                     <div className="flex flex-wrap items-start gap-10">
-                        <DestinationCard 
+                        <ImageCard 
                             image="handlarn.jpg"
-                            header="Lanthandel"
-                            description={handlarn}
+                            headText="Lanthandel"
+                            subtext={handlarn}
+                            btn={true}
                             link={emil}
-                            
+                            reverse={false}
                         />
-                        <DestinationCard
+                        <ImageCard
                             image="bool.jpg"
-                            header="Spielplatz & Boule-Bahn"
-                            description={kinder}
+                            headText="Spielplatz &amp; Boule-Bahn"
+                            subtext={kinder}
+                            btn={true}
                             link={emil}
+                            reverse={true}
                         />
-                        <DestinationCard
+                        <ImageCard
                             image="tennis.JPG"
-                            header="Fußballtennisplatz"
-                            description={fussbalTennis}
+                            headText="Fußballtennisplatz"
+                            subtext={fussbalTennis}
+                            btn={true}
                             link={emil}
+                            reverse={false}
                         />
-
                     </div>
-                
 
                     <div className="flex flex-wrap gap-10 items-start">
-                        <DestinationCard
+                        <ImageCard
                             image="tennis.JPG"
-                            header="Fußballtennisplatz"
-                            description={fussbalTennis}
+                            headText="Fußballtennisplatz"
+                            subtext={fussbalTennis}
+                            btn={true}
                             link={emil}
+                            reverse={true}
                         />
-                        <DestinationCard
+                        <ImageCard
                             image="wald.jpg"
-                            header="Wälder runt um totebo"
-                            description={wald}
+                            headText="Wälder runt um totebo"
+                            subtext={wald}
+                            btn={true}
                             link={emil}
+                            reverse={false}
                         />
-                        <DestinationCard
+                        <ImageCard
                             image="smalspåret.jpg"
-                            header="Smalspåret"
-                            description={Smalspåret}
+                            headText="Smalspåret"
+                            subtext={Smalspåret}
+                            btn={true}
                             link={emil}
+                            reverse={true}
                         />
                     </div>
                 </div>
-                    
-                    
-
-                    
             </section>
-
-            
-            
-            
-                
-            
-            
-        
-            
-            
-
-                
         </div>
     </div>
     )

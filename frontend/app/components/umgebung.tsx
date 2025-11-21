@@ -21,15 +21,19 @@ gsap.registerPlugin(ScrollTrigger);
 export function Umgebung()
 {
     const lokalesRef = useRef<HTMLDivElement>(null);
+    const ausflügeRef = useRef<HTMLDivElement>(null);
+
 
   
     
     return(
     <div>
-        <div className="pt-25 pb-5 bg-gradient-to-b from-[#f8f5ef] to-whiteflex flex-col">
+        <div className="pt-25 pb-5 bg-gradient-to-b from-[#f8f5ef] to-white flex flex-col">
 
-            <div className="fixed bottom-5 right-5 p-2  flex flex-col w-50 gap-5">
-                <button className="border rounded-xl w-full p-1 shadow-lg" onClick={() => lokalesRef.current?.scrollIntoView({ behavior: "smooth" })}>Lokales</button>
+            <div className="fixed bottom-5 right-5 p-2  flex flex-col w-50  gap-5 z-100 ">
+                <button className="border rounded-xl w-full p-1 bg-white hover-button" onClick={() => lokalesRef.current?.scrollIntoView({ behavior: "smooth" })}>Lokales</button>
+                <button className="border rounded-xl w-full p-1 bg-white hover-button" onClick={() => ausflügeRef.current?.scrollIntoView({ behavior: "smooth" })}>Ausflug Ziele</button>
+
                 
             </div>
             
@@ -117,6 +121,19 @@ export function Umgebung()
                         />
                     </div>
                 </div>
+            </section>
+                
+            <section ref={ausflügeRef} className="flex flex-col items-center gap-10  scroll-mt-25">
+                <h1 className="font-serif text-5xl">Ausflug Ziele</h1>
+                <ImageCard
+                            image="alg.jpg"
+                            headText="Unser bot Luna"
+                            subtext={see}
+                            btn={true}
+                            link={emil}
+                            reverse={false}
+                        />
+
             </section>
         </div>
     </div>

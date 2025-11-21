@@ -146,3 +146,26 @@ Fahrzeiten und weitere Informationen findet ihr auf der Homepage der Smalspåret
 Ein weiteres Highlight erwartet euch in Hultsfred: Von dort aus kann man auf einer alten Dressinenstrecke rund 12 km nach Målilla fahren. Der Ausflug mit den handbetriebenen Schienen-Draisinen ist ein großer Spaß für die ganze Familie und bietet ein außergewöhnliches Naturerlebnis auf Schienen.
 
 Auch hierzu findet ihr online weitere Informationen.`
+
+export const gård = `Unmittelbar an der Tankstelle, befindet sich die Metzgerei „Totebo Gård“ von Kicki Ottosson und Daniel Johansson.
+Hier wird hochwertiges Lamm- und Rindfleisch vom eigenen Hof angeboten. Zudem gehören Wildspezialitäten wie Elch, Wildschwein, Reh und Hirsch fest zum Sortiment – das Wild stammt dabei von örtlichen Jägern aus der Region.
+
+Wer Wert auf regionale Produkte und echte Qualität legt, findet hier eine ausgezeichnete Auswahl für den Grillabend oder ein typisch schwedisches Essen zuhause.`
+
+export const see = `Nur wenige Minuten von Haus Vårbacke entfernt liegt Totebos schöner Badesee „Nässjön“ – mit dem Fahrrad in ca. 3 Minuten oder zu Fuß in knapp 10 Minuten erreichbar.
+Der See zählt zu den Lieblingsorten unserer Kinder und ist ideal für einen entspannten Tag am Wasser. Am Badeplatz gibt es Sitzbänke, einen kleinen Kinderspielplatz, Umkleidekabinen sowie einen Steg mit Leiter ins Wasser. Der Uferbereich ist mit Sand aufgeschüttet und fällt sehr flach ab – perfekt für Familien und Nichtschwimmer.
+
+Auch darüber hinaus bietet Totebo eine große Auswahl an Seen, die zum Baden und Angeln einladen:
+
+Gränsjön – zwischen Totebo und Spångenäs
+Sehr flacher Einstieg über mehrere hundert Meter → ideal für Kinder.
+
+Hjorten – ca. 9 km entfernt bei Hjorted
+Badeplatz mit Steg und Liegewiese, gut erreichbar.
+
+Yxern – Richtung Vimmerby
+Der größte See in der Umgebung mit vielen ruhigen Badestellen.
+
+Unser Tipp:
+Erkundet einfach selbst die Seen rund um Totebo und entscheidet, welcher für euch der schönste ist – jeder hat seinen ganz eigenen Charme.
+Am Nässjön kann man jedenfalls hervorragend entspannen und die wunderbare Natur und Ruhe Schwedens genießen.`

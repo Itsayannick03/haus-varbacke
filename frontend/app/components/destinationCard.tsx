@@ -39,7 +39,7 @@ export function DestinationCard({image, header, description, link}:DestinationCa
             {shouldShowExpand && (
                 <button
                 onClick={() => setExpanded(!expanded)}
-                className="mt-2 text-blue-600 underline text-sm self-start"
+                className="mt-2 text-red-600 underline text-sm self-start"
                 >
                 {expanded ? "Weniger anzeigen" : "Mehr anzeigen"}
                 </button>

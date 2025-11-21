@@ -5,10 +5,24 @@ import {emil} from "../usables/links"
 import { useRef } from "react";
 import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret, gård, see } from "~/strings";
 import { ImageCard } from "./ImageCard";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Umgebung()
 {
     const lokalesRef = useRef<HTMLDivElement>(null);
+
+  
     
     return(
     <div>
@@ -24,7 +38,7 @@ export function Umgebung()
 
                 <div className="flex flex-col gap-5 pb-5 border-b">
 
-                    <div className="flex flex-wrap items-start">
+                    <div className="flex flex-wrap items-start fade">
                         <ImageCard 
                             image="handlarn.jpg"
                             headText="Lanthandel"
@@ -40,6 +54,7 @@ export function Umgebung()
                             btn={true}
                             link={emil}
                             reverse={true}
+                            noFade={true}
                         />
                         <ImageCard
                             image="tennis.JPG"
@@ -91,6 +106,14 @@ export function Umgebung()
                             btn={true}
                             link={emil}
                             reverse={true}
+                        />
+                        <ImageCard
+                            image="boat.JPG"
+                            headText="Unser bot Luna"
+                            subtext='Hier am Nässjön liegt auch unser 4,30m langes Ruderboot "Luna", welches zusammen mit unserem "on-top" Kajak von unseren Gästen kostenlos mitbenutzt werden kann.'
+                            btn={true}
+                            link={emil}
+                            reverse={false}
                         />
                     </div>
                 </div>

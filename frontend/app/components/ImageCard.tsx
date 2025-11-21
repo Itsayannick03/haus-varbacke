@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuMapPin } from "react-icons/lu";
+import Lenis from "@studio-freight/lenis";
 
 type ImageCardProps = {
     image: string;
@@ -10,22 +11,106 @@ type ImageCardProps = {
     link?: string;
     reverse?: boolean;
     btn?:boolean
+    noFade?:boolean
 }
 
-export function ImageCard({ image, headText, subtext, reverse, btn, link }: ImageCardProps) {
+export function ImageCard({ image, headText, subtext, reverse, btn, link, noFade }: ImageCardProps) {
   
  const [expanded, setExpanded] = useState(false);
+ const test = 0;
 
  const textLen = subtext?.split("\n").length;
  const shouldShowExpand = textLen >= 4;
+
+ useEffect(() => {
+     const texts = gsap.utils.toArray(".fade-text");
+     texts.forEach((el: any) => {
+       gsap.fromTo(
+       el,
+       { autoAlpha: 0, x: -200 },   // start left
+   {
+     autoAlpha: 1,
+     x: 0,                      // end at normal position
+     duration: 1,
+     ease: "power3.out",
+     scrollTrigger: {
+       trigger: el,
+       start: "top 90%"
+       ,        // adjust if needed
+       end: "top 30%",
+ 
+       scrub: 2,
+       markers: false
+     }}
+       
+     )
+     })
+   }, [])
+ 
+   useEffect(() => {
+     const revTexts = gsap.utils.toArray(".fade-text-reverse");
+     revTexts.forEach((el: any) => {
+       gsap.fromTo(
+       el,
+       { autoAlpha: 0, x: 200 },   // start left
+   {
+     autoAlpha: 1,
+     x: 0,                      // end at normal position
+     duration: 1,
+     ease: "power3.out",
+     scrollTrigger: {
+       trigger: el,
+       start: "top 70%",        // adjust if needed
+          end: "top 10%",
+       scrub: 2,
+       markers: false
+     }}
+       
+     )
+     })
+   }, [])
+ 
+     useEffect(() => {
+     const lenis = new Lenis({
+       duration: 1.5,
+       easing: (t) => 1 - Math.pow(1 - t, 2),
+       smoothWheel: true,
+     });
+ 
+     // GSAP integration
+     function raf(time: number) {
+       lenis.raf(time);
+       ScrollTrigger.update(); // ✅ keeps GSAP synced
+       requestAnimationFrame(raf);
+     }
+ 
+     requestAnimationFrame(raf);
+ 
+     // Optional: if you want GSAP to use Lenis’s scroller
+     
+ 
+     // Refresh ScrollTrigger on Lenis scroll
+     lenis.on("scroll", ScrollTrigger.update);
+ 
+     return () => {
+       lenis.destroy();
+       
+     };
+   }, []);
+
+  
   
   return (
     <div
-      className={`flex flex-col md:flex-row items-center gap-10 px-12 py-10  ${
-        reverse ? "md:flex-row-reverse fade-text-reverse" : "fade-text"
-      }`}
+      className={`flex flex-col md:flex-row items-center gap-10 px-12 py-10  ${ [
+  reverse && "md:flex-row-reverse",
+  !noFade && (reverse ? "fade-text-reverse fade" : "fade-text")
+].filter(Boolean).join(" ")
+        }
+        
+        `}
     >
-      <div className="rounded-3xl overflow-hidden box">
+    <div className="rounded-3xl overflow-hidden box">
   <img src={image} alt="" className="w-full h-full object-cover" />
 </div>
       <div className="md:w-1/2 text-[#4a4a4a] font-serif ">

@@ -2,11 +2,12 @@ import "../styles/welcome.css"
 import "aos/dist/aos.css";
 import { LuMapPin } from "react-icons/lu";
 import {emil} from "../usables/links"
-import { useRef } from "react";
-import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret, gård, see } from "~/strings";
+import { useEffect, useRef } from "react";
+import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret, gård, see, älg } from "~/strings";
 import { ImageCard } from "./ImageCard";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from '@studio-freight/lenis'
 
 
 
@@ -23,24 +24,43 @@ export function Umgebung()
     const lokalesRef = useRef<HTMLDivElement>(null);
     const ausflügeRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const sections = gsap.utils.toArray(".scroll-section")
+        sections.forEach((el : any) => {
+            gsap.fromTo(el,
+       { autoAlpha: 0, y: 200 },   // start left
+   {
+     autoAlpha: 1,
+     y: 0,                      // end at normal position
+     duration: 1,
+     ease: "power3.out",
+     scrollTrigger: {
+       trigger: el,
+       start: "top 100%",        // adjust if needed
+          end: "top 10%",
+       scrub: 2,
+       markers: false
+     }})
+        })
+    }, [])
+    
 
-  
     
     return(
     <div>
         <div className="pt-25 pb-5 bg-gradient-to-b from-[#f8f5ef] to-white flex flex-col">
 
             <div className="fixed bottom-5 right-5 p-2  flex flex-col w-50  gap-5 z-100 ">
-                <button className="border rounded-xl w-full p-1 bg-white hover-button" onClick={() => lokalesRef.current?.scrollIntoView({ behavior: "smooth" })}>Lokales</button>
+                <button className="border rounded-xl w-full p-1 bg-white hover-button " onClick={() => lokalesRef.current?.scrollIntoView({ behavior: "smooth" })}>Lokales</button>
                 <button className="border rounded-xl w-full p-1 bg-white hover-button" onClick={() => ausflügeRef.current?.scrollIntoView({ behavior: "smooth" })}>Ausflug Ziele</button>
 
                 
             </div>
             
-            <section ref={lokalesRef} className="flex flex-col items-center gap-10  scroll-mt-25">
+            <section ref={lokalesRef} className="flex flex-col items-center gap-10  pb-10 scroll-mt-25 ">
                 <h1 className="font-serif text-5xl">Totebo und Umgebung</h1>
 
-                <div className="flex flex-col gap-5 pb-5 border-b">
+                <div className="flex flex-col gap-5 pb-5 border-b rounded-lg shadow-lg">
 
                     <div className="flex flex-wrap items-start fade">
                         <ImageCard 
@@ -123,16 +143,26 @@ export function Umgebung()
                 </div>
             </section>
                 
-            <section ref={ausflügeRef} className="flex flex-col items-center gap-10  scroll-mt-25">
+            <section ref={ausflügeRef} className="flex flex-col items-center gap-10  scroll-mt-25 scroll-section">
                 <h1 className="font-serif text-5xl">Ausflug Ziele</h1>
                 <ImageCard
-                            image="alg.jpg"
-                            headText="Unser bot Luna"
-                            subtext={see}
-                            btn={true}
-                            link={emil}
-                            reverse={false}
-                        />
+                    image="alg.jpg"
+                    headText="Virum Elchpark"
+                    subtext={älg}
+                    btn={true}
+                    link={emil}
+                    reverse={false}
+                />
+                <ImageCard
+                    image="alg.jpg"
+                    headText="Virum Elchpark"
+                    subtext={älg}
+                    btn={true}
+                    link={emil}
+                    reverse={false}
+                />
+        
+               
 
             </section>
         </div>

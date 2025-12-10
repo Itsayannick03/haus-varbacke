@@ -22,7 +22,7 @@ export function Header()
             </div>
 
             <div className="flex-row space-x-5">
-                <a href="#umgebung" className="mirror" >Umgebung</a>
+                <a href="/umgebung" className="mirror" >Umgebung</a>
 
                 <a href="#anreise" className="mirror" >Anreise</a>
                 <a href="#gastebuch" className="mirror" >Gästebuch</a>

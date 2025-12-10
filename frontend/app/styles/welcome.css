@@ -27,6 +27,19 @@
 
   transform: translateY(-4px); /* slight lift effect */
 }
+.hover-button
+{
+  transition: all 0.25s ease-in-out;
+}
+
+.hover-button:hover
+{
+  box-shadow: 0px 5px 5px inset rgba(0, 0, 0, 0.2);
+
+  
+
+  transform: translateY(-4px); /* slight lift effect */
+}
 
 .shadow-btn
 {

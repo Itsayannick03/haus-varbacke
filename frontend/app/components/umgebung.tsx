@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import { LuMapPin } from "react-icons/lu";
 import {emil} from "../usables/links"
 import { useEffect, useRef } from "react";
-import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret, gård, see, älg } from "~/strings";
+import { handlarn, wald, kinder, fussbalTennis, fussball, Smalspåret, gård, see, älg, västervik, skärgård, gränsö, Vimmerby, näs, värld, buller, katthult } from "~/strings";
 import { ImageCard } from "./ImageCard";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -153,15 +153,69 @@ export function Umgebung()
                     link={emil}
                     reverse={false}
                 />
+
                 <ImageCard
-                    image="alg.jpg"
-                    headText="Virum Elchpark"
-                    subtext={älg}
+                    image="skärgård.jpg"
+                    headText="Västerviks Schärengarten"
+                    subtext={skärgård}
+                    btn={true}
+                    link={emil}
+                    reverse={true}
+                />
+
+                <ImageCard
+                    image="gränsö.jpg"
+                    headText="Naturreservat Gränsö"
+                    subtext={gränsö}
                     btn={true}
                     link={emil}
                     reverse={false}
                 />
-        
+
+                <ImageCard
+                    image="vimmerby.jpg"
+                    headText="Vimmerby"
+                    subtext={Vimmerby}
+                    btn={true}
+                    link={emil}
+                    reverse={true}
+                />
+
+                <ImageCard
+                    image="näs.jpg"
+                    headText="Astrid Lindgrens Näs"
+                    subtext={näs}
+                    btn={true}
+                    link={emil}
+                    reverse={false}
+                />
+
+                <ImageCard
+                    image="villaKunter.jpg"
+                    headText="Astrid Lindgrens Värld"
+                    subtext={värld}
+                    btn={true}
+                    link={emil}
+                    reverse={true}
+                />
+
+                <ImageCard
+                    image="Bullerbü.jpg"
+                    headText="Bullerbyn"
+                    subtext={buller}
+                    btn={true}
+                    link={emil}
+                    reverse={false}
+                />
+
+                <ImageCard
+                    image="katthult.jpg"
+                    headText="Katthult"
+                    subtext={katthult}
+                    btn={true}
+                    link={emil}
+                    reverse={true}
+                />
                
 
             </section>

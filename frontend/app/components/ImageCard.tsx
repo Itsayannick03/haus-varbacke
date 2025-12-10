@@ -19,8 +19,8 @@ export function ImageCard({ image, headText, subtext, reverse, btn, link, noFade
  const [expanded, setExpanded] = useState(false);
  const test = 0;
 
- const textLen = subtext?.split("\n").length;
- const shouldShowExpand = textLen >= 4;
+ const textLen = subtext?.length;
+ const shouldShowExpand = textLen >= 200;
 
  useEffect(() => {
      const texts = gsap.utils.toArray(".fade-text");
@@ -116,7 +116,7 @@ export function ImageCard({ image, headText, subtext, reverse, btn, link, noFade
       <div className="md:w-1/2 text-[#4a4a4a] font-serif ">
         <h3 className="text-3xl  font-semibold mb-4 relative right-0">{headText}</h3>
         <div className="flex flex-row  ">
-          {subtext && <p className={`transition-all leading-relaxed overflow-hidden duration-1000 whitespace-pre-line ${expanded ? "line-clamp-none max-h-[1000px]" : "line-clamp-5 max-h-[200px]"}`}>{subtext}</p>}
+          {subtext && <p className={`transition-all leading-relaxed overflow-hidden duration-1000 whitespace-pre-line ${expanded ? "line-clamp-none max-h-[1000px]" : "line-clamp-5 "}`}>{subtext}</p>}
           {shouldShowExpand && <button className="flex flex-col  w-50 justify-end mb-2 mx-5 text-blue-600 underline text-sm"  onClick={() => setExpanded(!expanded)}>{expanded ? "Weniger Anzeigen" : "Mehr Anzeigen"}</button>}
         </div>
         

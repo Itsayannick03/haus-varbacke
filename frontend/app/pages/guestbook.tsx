@@ -22,7 +22,7 @@ export default function guestBook()
   ];
     return(
       <div className="pt-40 pb-10 flex justify-center bg-gradient-to-b from-[#f8f5ef] to-white">
-      <HTMLFlipBook  width={400} height={500} showCover={true} drawShadow={true} maxShadowOpacity={0.5} showPageCorners={false}>
+      <HTMLFlipBook  width={400} height={500} showCover={true} drawShadow={false} maxShadowOpacity={0.5} showPageCorners={false}>
           <div className="shadow-lg">
             <img className="w-full h-full " src="book.png" alt="" />
           </div>
@@ -30,9 +30,13 @@ export default function guestBook()
           
 
           {users.map((user) => (
-            <div className="bg-white flex flex-col  shadow-lg border-gray-200" key={user.id}>
-              <h2>{user.name}</h2>
-              <p>Age: {user.age}</p>
+            <div className="page-content bg-[#fcf3f3]  color-[#4f2626] shadow-lg border-gray-200 gap-50px" key={user.id}>
+              <div className="flex overflow-hidden  flex-col items-center justify-center">
+                <h2>{user.name}</h2>
+                <p>Age: {user.age}</p>
+                <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. At natus, numquam iusto beatae quia, odit quod a eum maxime quos illum? Quibusdam assumenda dignissimos officiis, perspiciatis perferendis molestias delectus nihil.</p>
+              </div>
+              
             </div>
             
           ))}

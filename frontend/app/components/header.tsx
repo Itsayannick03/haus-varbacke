@@ -25,7 +25,7 @@ export function Header()
                 <a href="/umgebung" className="mirror" >Umgebung</a>
 
                 <a href="#anreise" className="mirror" >Anreise</a>
-                <a href="#gastebuch" className="mirror" >Gästebuch</a>
+                <a href="/guestbook" className="mirror" >Gästebuch</a>
 
                 <a href="#uberUns" className="mirror" >Über Uns</a>
             </div>

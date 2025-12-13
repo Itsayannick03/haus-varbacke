@@ -26,49 +26,81 @@ export default function guestBook()
   ];
     return(
       <div className="pt-40 pb-10 flex justify-center bg-gradient-to-b from-[#f8f5ef] to-white">
-      <HTMLFlipBook  width={400} height={500} showCover={true} drawShadow={false} maxShadowOpacity={0.5} showPageCorners={false}>
-          <div className="shadow-lg">
-            <img className="w-full h-full " src="book.png" alt="" />
-          </div>
+      <HTMLFlipBook
+  width={420}
+  height={540}
+  showCover={true}
+  drawShadow={false}
+  maxShadowOpacity={0.4}
+  showPageCorners={false}
+>
+  {/* Cover */}
+  <div className="shadow-2xl">
+    <img className="w-full h-full object-cover" src="book.png" alt="" />
+  </div>
 
-         <div className="page-content bg-[#fcf3f3]  color-[#4f2626] shadow-lg border-gray-200 gap-50px" >
-              <div className="flex h-full  500 overflow-hidden font-serif  flex-col items-center  ">
-                <div className="flex flex-col items-center justify-center border-b border-[#4f2626] w-90">
-                  <input className="  pl-2  border-b w-50 text-3xl flex items-center leading-none text-center" type="text" placeholder="Name" />
-                  <p> {today.toDateString()}</p>
-                </div>
+  {/* Entry page */}
+  <div className="page-content shadow-xl">
+    <div className="h-full flex flex-col font-serif px-8 py-10 book-paper">
+      
+      {/* Header */}
+      <div className="text-center border-b border-[#6b4a3a]/40 pb-4 mb-6">
+        <input
+  className="bg-transparent text-3xl text-center w-full outline-none placeholder-[#7a5a4a]"
+  type="text"
+  placeholder="Name"
+  onMouseDown={(e) => e.stopPropagation()}
+  onTouchStart={(e) => e.stopPropagation()}
+/>
 
-                <div className="pt-5 pb-5  w-90 h-100 flex items-center justify-center ">
-                  <input className="bg-white h-90 w-85 rounded-2xl flex p-4 align-top resize-none"  type="text" placeholder="Schreiben Sie hier Ihren Eintrag…"/>
-                </div>
-                <div className="w-full h-full flex justify-end pr-2  items-center">
-                  <button className="border-[#0000014] bg-white h-8 w-30 text-sm rounded-xl shadow-lg hover:shadow-[inset_0_2px_6px_rgba(0,0,0,0.25)] transition-all duration-[800ms] ease-in-out">Absenden</button>
-                </div>
-              </div>
-              
-            </div>
+        <p className="text-sm mt-1 text-[#6b4a3a]">
+          {today.toDateString()}
+        </p>
+      </div>
 
-          
+      {/* Lined textarea */}
+      <textarea
+  className="lined-paper flex-grow resize-none outline-none text-lg leading-[2.2rem] text-[#4f2626] px-2"
+  placeholder="Schreiben Sie hier Ihren Eintrag…"
+  onMouseDown={(e) => e.stopPropagation()}
+  onTouchStart={(e) => e.stopPropagation()}
+/>
 
-          {users.map((user) => (
-            <div className="page-content bg-[#fcf3f3]  color-[#4f2626] shadow-lg border-gray-200 gap-50px" key={user.id}>
-              <div className="flex overflow-hidden font-serif  flex-col items-center justify-center ">
-                <div className="flex flex-col items-center justify-center border-b border-[#4f2626] w-90">
-                  <h2 className="text-3xl font-bold ">{user.fname} {user.lname}</h2>
-                  <p> {user.date}</p>
-                </div>
-                
-                <p className="">{user.comment}</p>
-              </div>
-              
-            </div>
-            
-          ))}
-        
-        <div className="bg-red-500 shadow-lg">
+      {/* Button */}
+      <div className="flex justify-end mt-6">
+        <button
+  className="old-button"
+  onMouseDown={(e) => e.stopPropagation()}
+  onTouchStart={(e) => e.stopPropagation()}
+>
+  Absenden
+</button>
 
+      </div>
+    </div>
+  </div>
+
+  {/* Existing entries */}
+  {users.map((user) => (
+    <div
+      key={user.id}
+      className="page-content shadow-xl"
+    >
+      <div className="h-full flex flex-col font-serif px-8 py-10 book-paper">
+        <div className="text-center border-b border-[#6b4a3a]/40 pb-4 mb-6">
+          <h2 className="text-3xl font-bold text-[#4f2626]">
+            {user.fname} {user.lname}
+          </h2>
+          <p className="text-sm text-[#6b4a3a]">{user.date}</p>
         </div>
-    </HTMLFlipBook>
+
+        <p className="text-lg leading-[2.2rem] text-[#4f2626] whitespace-pre-wrap">
+          {user.comment}
+        </p>
+      </div>
+    </div>
+  ))}
+</HTMLFlipBook>
     </div>
     )
 }
